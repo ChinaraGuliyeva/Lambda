@@ -1,0 +1,358 @@
+* {
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  }
+
+html { box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans"),
+    local("Open Sans Regular"),
+    url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: normal;
+  src: local("Open Sans"),
+    local("Open Sans Bold"),
+    url("../fonts/opensans-bold-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-bold-webfont.woff") format("woff");
+}
+
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.title,
+.logo,
+.menu-dish-name,
+.review-text {
+  font-family: 'Yeseva One', 'Courier New', sans-serif;
+}
+
+.page-header {
+  color: #FFF;
+  background-color: #000;
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  font-size: 36px;
+  line-height: auto;
+  text-align: center;
+}
+
+.logo {
+  font-size: 36px;
+}
+
+.header-menu,
+.header-socials,
+.list-menu,
+.footer-columns,
+.footer-payments,
+.footer-socials {
+  list-style-type: none;
+}
+
+.header-link,
+.header-socials {
+  font-size: 21px;
+  line-height: auto;
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: #dab33e;
+}
+
+.header-link:active {
+  color: #cc9900;
+}
+
+.header-icons {
+  text-decoration: none;
+  color: #dab33e;
+}
+
+.header-icons:hover,
+.header-icons:focus {
+  color: #cc9900;
+}
+
+.header-icons:active {
+  color: #FFF;
+}
+
+.header-page-title {
+  font-size: 90px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Yeseva One', 'Courier New', sans-serif;
+}
+
+.header-top-container{
+  display: flex;
+}
+
+.header-menu {
+  display: flex;
+}
+
+.header-socials {
+  display: flex;
+}
+
+.header-btn {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 3.16;
+  width: 228px;
+  height: 57px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.header-btn:hover,
+.header-btn:focus {
+  transform: scale(0.9);
+}
+
+.header-btn:active {
+  transform: scale(0.8);
+}
+
+.btn-book-table {
+  background-image: url("../img/button_black.png");
+  background-repeat: no-repeat;
+}
+
+.btn-see-menu {
+  background-image: url("../img/button_white.png");
+  background-repeat: no-repeat;
+}
+
+.about {
+  display: flex;
+  color: #4c4c4c;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #FFF;
+  background-image: url('../img/pattern-piece.jpg');
+}
+
+.about-title {
+  color: #cc9900;
+  font-size: 36px;
+}
+
+.about-food-pic{
+  border-radius: 50%;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.3);
+}
+
+.ingredients {
+  color: #FFF;
+  background-color: #000000;
+  background-image: url('../img/ingredients_bg.jpg');
+  background-size: cover;
+}
+
+.ingredients-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ingredients-list{
+  display: flex;
+}
+
+.menu {
+  line-height: 1.5;
+  color: #4c4c4c;
+  background-color: #FFF;
+  background-image: url('../img/pattern2-piece.jpg');
+  background-repeat: repeat;
+}
+
+.menu-title {
+  color: #cc9900;
+}
+
+.list-menu{
+  display: flex;
+  flex-direction:  column;
+  flex-wrap: wrap;
+}
+
+.menu-dish-name {
+  color: #cdab56;
+  font-size: 21px;
+}
+
+.menu-dish-description{
+  font-size: 16px;
+}
+
+.menu-price{
+  color: #cdab56;
+  font-size: 21px;
+}
+
+.reviews {
+  color: #FFF;
+  background-color: #000000;
+  background-image: url('../img/reviews_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.review-text {
+  font-size: 25px;
+  line-height: 1.8;
+}
+
+.review-source {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 2.5;
+ }
+
+.reservation {
+  display: flex;
+  color: #4c4c4c;
+  background-color: #FFF;
+  background-image: url('../img/pattern-piece.jpg');
+  background-repeat: repeat;
+}
+
+.reservation-images{
+  display: flex;
+}
+
+.reservation-title {
+  color: #cc9900;
+}
+
+.reservation-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.form-label {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-weight: bold;
+  color: #cc9900;
+}
+
+.reservation-name,
+.reservation-mail,
+.reservation-number {
+  font-size: 14px;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+.reservation-name,
+.reservation-mail,
+.reservation-date,
+.reservation-number {
+  width: 200px;
+  height: 36px;
+  padding: 0 0 0 10px;
+  border: none;
+}
+
+.reservation-btn{
+  width: 200px;
+  height: 36px;
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  background-color: #c9a131;
+}
+
+.reservation-btn:hover,
+.reservation-btn:focus
+ {
+  background-color: #ab8b33;
+}
+
+.reservation-btn:active {
+  background-color: #9d8133;
+}
+
+.page-footer {
+  color: #FFF;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #000000;
+}
+
+.footer-columns{
+  display: flex;
+}
+
+.footer-payments {
+  display: flex;
+}
+
+.footer-socials {
+  display: flex;
+}
+
+.footer-description,
+.footer-payments {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+.footer-location {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.footer-title {
+  font-size: 21px;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #dab33e;
+}
+
+.footer-link:active {
+  color: #cc9900;
+}
