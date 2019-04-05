@@ -1,13 +1,3 @@
-* {
-  outline: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  }
-
-html { box-sizing: border-box;
-}
-
 @font-face {
   font-family: "Open Sans";
   font-weight: 400;
@@ -28,8 +18,22 @@ html { box-sizing: border-box;
     url("../fonts/opensans-bold-webfont.woff") format("woff");
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html { box-sizing: border-box;
+}
+
 body {
+  margin: 0 auto;
+  color: #000;
   font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 16px;
+  background-color: #FFF;
 }
 
 a {
@@ -45,6 +49,14 @@ a {
   margin: -1px;
 }
 
+.header-top {
+  padding: 0 175px;
+}
+
+.logo {
+  padding: 4px 0 0 2px;
+}
+
 .title,
 .logo,
 .menu-dish-name,
@@ -53,6 +65,7 @@ a {
 }
 
 .page-header {
+  width: 1600px;
   color: #FFF;
   background-color: #000;
   background-image: url('../img/bg.jpg');
@@ -66,10 +79,6 @@ a {
   text-align: center;
 }
 
-.logo {
-  font-size: 36px;
-}
-
 .header-menu,
 .header-socials,
 .list-menu,
@@ -77,6 +86,12 @@ a {
 .footer-payments,
 .footer-socials {
   list-style-type: none;
+}
+
+.header-link {
+  display: inline-block;
+  padding: 33px 4px 43px 4px;
+  margin: 0 11px;
 }
 
 .header-link,
@@ -94,7 +109,13 @@ a {
   color: #cc9900;
 }
 
+.header-socials {
+  margin: 0 28px 0 0;
+}
+
 .header-icons {
+  display: inline-block;
+  padding: 50px 10px 43px 8px;
   text-decoration: none;
   color: #dab33e;
 }
@@ -110,11 +131,13 @@ a {
 
 .header-page-title {
   font-size: 90px;
+  padding: 80px 5px 111px 32px;
+  margin: 10px 285px;
 }
 
 .header-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-family: 'Yeseva One', 'Courier New', sans-serif;
 }
 
@@ -311,6 +334,7 @@ a {
 }
 
 .page-footer {
+  margin: auto 0px 0px 0px;
   color: #FFF;
   font-size: 16px;
   line-height: 1.5;
