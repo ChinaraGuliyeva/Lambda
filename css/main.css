@@ -269,14 +269,23 @@ a {
 }
 
 .menu-title {
-  color: #cc9900;
+  padding: 0 0 20px 0;
+  color: #cc9900; 
+}
+
+.menu-price {
+  position: relative;
+  bottom: 60px;
+  left: 380px;  
+  font-family: 'Yeseva One', 'Courier New', sans-serif;
 }
 
 .list-menu{
   display: flex;
-  flex-direction:  row;
+  justify-content: space-around;
+  flex-direction: row;
   flex-wrap: wrap; 
-  padding: 80px 240px;
+  padding: 80px 240px; 
 }
 
 .menu-dish-name {
@@ -285,6 +294,8 @@ a {
 }
 
 .menu-dish-description{
+  position: relative;
+  right: 55px;
   font-size: 16px;
 }
 
@@ -328,14 +339,22 @@ a {
 
 .reservation {
   display: flex;
+  justify-content: space-evenly;
+  padding: 100px 100px;
   color: #4c4c4c;
   background-color: #FFF;
   background-image: url('../img/pattern-piece.jpg');
   background-repeat: repeat;
 }
 
-.reservation-images{
-  display: flex;
+.reservation-pic{
+  display: inline-block;
+  margin: 0 20px 0 15px;
+}
+
+.reservation-container{
+  width: 500px; 
+  padding: 0 100px 0 0;
 }
 
 .reservation-title {
@@ -390,7 +409,7 @@ a {
 }
 
 .page-footer {
-  margin: auto 0px 0px 0px;
+  padding: 55px 0 0 0;
   color: #FFF;
   font-size: 16px;
   line-height: 1.5;
@@ -399,12 +418,27 @@ a {
 
 .footer-columns{
   display: flex;
+  justify-content: space-between;
+  margin: 0 0;
+}
+
+.footer-about-us{
+  width: 370px; 
+  margin: 0 0 0 200px;
+}
+
+.footer-opening-hours{
+  width: 290px;
 }
 
 .footer-payments {
-  display: flex;
+  display: flex;  
 }
 
+.footer-our-location{
+  width: 290px;
+  margin: 0 200px 0 0;
+}
 .footer-socials {
   display: flex;
 }
@@ -425,7 +459,9 @@ a {
 }
 
 .footer-title {
+  text-align: left;
   font-size: 21px;
+  padding: 0 0 35px 125px;
 }
 
 .footer-link:hover,
