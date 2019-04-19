@@ -316,7 +316,7 @@ a {
 }
 
 .reviews-title {
-  padding: 80px 0 30px 0;
+  padding: 75px 0 30px 0;
 }
 
 .reviews-container{
@@ -327,9 +327,9 @@ a {
 }
 
 .review-text {
-  font-size: 25px;
-  line-height: 1.8;
-  padding: 0 15px;
+  font-size: 22px;
+  line-height: 2;
+  padding: 8px 25px 0 25px;
 }
 
 .review-source {
@@ -360,11 +360,18 @@ a {
 
 .reservation-title {
   color: #cc9900;
+  padding: 0 0 45px 0;
 }
 
 .reservation-text {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.reservation-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px;
 }
 
 .form-label {
@@ -375,24 +382,61 @@ a {
 
 .reservation-name,
 .reservation-mail,
+.reservation-date,
 .reservation-number {
+  display: block;
+  height: 36px;
+  padding: 0 0 0 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #c8c6c6 ;
   font-size: 14px;
   font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
-.reservation-name,
-.reservation-mail,
-.reservation-date,
-.reservation-number {
-  width: 200px;
-  height: 36px;
-  padding: 0 0 0 10px;
-  border: none;
+.reservation-name:hover,
+.reservation-name:focus,
+.reservation-mail:hover,
+.reservation-mail:focus,
+.reservation-date:hover,
+.reservation-date:focus,
+.reservation-number:hover,
+.reservation-number:focus {
+  border: 1px solid #c89f2d ;
+}
+
+/*Нашла статью, как стилизовать плейсхолдеры, не знаю, что такое webkit и moz и взяла код оттуда*/
+
+::-webkit-input-placeholder { font-style: italic; }
+::-moz-placeholder          { font-style: italic; } /* Firefox 19+ */
+:-moz-placeholder           { font-style: italic; } /* Firefox 18- */
+:-ms-input-placeholder      { font-style: italic;}
+
+/*Прячет стрелки в Chrome*/
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*Прячет стрелки в Firefox*/
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*Прячет стрелки в остальных браузерах*/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .reservation-btn{
   width: 200px;
-  height: 36px;
+  min-height: 36px;
   border: none;
   font-size: 16px;
   color: #FFF;
