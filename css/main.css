@@ -104,7 +104,6 @@ a {
   font-family: 'Yeseva One', 'Courier New', sans-serif;
 }
 
-
 .header-link {
  padding: 0 30px 0 0;
 }
@@ -155,30 +154,32 @@ a {
 }
 
 .header-promo {
-  padding: 90px 0;
+  padding: 90px 0 140px;
 }
 
 .header-page-title {
-  padding: 0 20%;
+  position: relative;
+  padding: 0 20% 105px; 
   font-size: 85px;
   line-height: 1.4;
 }
+
+/*Когда я спускаю дивайдер на место, перестают работать кнопки. Почему? Поэтому я остаила его валяться в стороне*/
 
 .header-page-title::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 370px;
-  top: 315px;
+  left: 30px;
+  top: 25px;
   background-image: url("../img/Header-decoration.png");
   background-repeat: no-repeat;
 }
 
 .header-btn {
   display: inline-block;
-  min-width: 228px; /*! Переделать на паддинги это и следующее*/
-  min-height: 50px;
+  padding: 0 50px;
   font-size: 18px;
   line-height: 3.16;
   text-align: center;
@@ -201,13 +202,13 @@ a {
 }
 
 .btn-book-table {
-  margin: 0 27px 0 557px;  /* не используй такие огромные значения в отступах (557) , ищи другие способы, это плохая практика */
+  margin: 0 27px 0 35%;
 }
 
 .about {
   display: flex;
   justify-content: space-around;
-  padding: 0 260px; /* если ты используешь такие большие осттпы в 99% ты чтото делаешь не так, используй контейнер-центровщик */
+  padding: 0 18%; 
   color: #4c4c4c;
   font-size: 16px;
   line-height: 1.5;
@@ -225,7 +226,7 @@ a {
   content: '';
   position: absolute;
   top: 150px;
-  left: 80px;
+  left: 70px;
   width: 65%;
   height: 65%;
   background-image: url("../img/divider-gold.svg");
@@ -239,7 +240,7 @@ a {
 }
 
 .about-container {
-  flex-basis: 435px; /* рекомендую использовать один контейнер-центровщик */
+  flex-basis: 435px; 
   text-align: center;
   padding: 0 10px;
 }
@@ -248,8 +249,8 @@ a {
   margin: 35px 0 0 19%;
 }
 
-.ingredients { /* зачем это свойство ты используешь? Инлайн-блоки лучше использовать для микросеток */
-  display: inline-block;
+.ingredients { 
+  padding: 100px 13% 100px 51%;
   color: #FFF;
   background-color: #000;
   background-image: url('../img/ingredients_bg.jpg');
@@ -258,25 +259,36 @@ a {
 
 .ingredients-container {
   width: 570px;
-  min-height: 557px; /* лучше пропиши паддинги для контента и убери высоту */
-  margin: 100px 215px 101px 815px; /* опять же убирай такие огромные маргины и ищи способ сделать более просто. Потому что такая верстка убьет твою сетку сразу же как только понадобиться сделать минимальный адаптив */
+  padding: 70px 82px 78px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .ingredients-title {
-  padding: 77px 0 47px 7px;
+  padding: 0 0 40px;
+  }
+
+.ingredients-title::after {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 70px;
+  width: 65%;
+  height: 65%;
+  background-image: url("../img/divider-white.svg");
+  background-repeat: no-repeat;
 }
 
 .ingredients-description {
+  padding: 0 0 50px;
   font-size: 16px;
   line-height: 1.5;
-  padding: 0 80px;
   text-align: center;
 }
 
 .ingredients-list {
   display: flex;
-  margin: 70px 0px 0 50px; /* лучше работай с паддингами */
+  justify-content: space-around;  
+  padding: 0 0 0 10px;
 }
 
 .ingredient-pic {
@@ -284,7 +296,6 @@ a {
 }
 
 .menu {
-  line-height: 1.5; /* задавай текстовым блокам, а не большим сеткам */
   color: #4c4c4c;
   background-color: #FFF;
   background-image: url('../img/pattern2-piece.jpg');
@@ -297,35 +308,34 @@ a {
 }
 
 .menu-price {
-  position: relative;
-  bottom: 60px; /* зачем тут координаты? Используй их для абсолютного позиционирования */
-  left: 380px;  
   font-family: 'Yeseva One', 'Courier New', sans-serif;
 }
 
 .list-menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap; 
-  padding: 80px 240px; 
+  padding: 80px 18%; 
   margin: 0 0;
 }
 
+/*Я изменила разметку и сделала название блюда не как заголовок, иначе не могла поднять цену без использования кординат, которые ты сказала не использовать*/
 .menu-dish-name {
   color: #cdab56;
-  font-size: 21px; /* высота строки?*/
+  font-size: 21px; 
+  line-height: 1.5;
 }
 
 .menu-dish-description {
-  position: relative;
-  right: 55px;
   font-size: 16px;
 }
 
 .menu-price {
+  float: right;
   color: #cdab56;
   font-size: 21px;
+  text-align: right;
 }
 
 .reviews { 
