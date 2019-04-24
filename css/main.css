@@ -158,7 +158,7 @@ a {
 }
 
 .header-page-title {
-  position: relative;
+  position: relative; 
   padding: 0 20% 105px; 
   font-size: 85px;
   line-height: 1.4;
@@ -171,8 +171,7 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 30px;
-  top: 25px;
+  top: 250px;
   background-image: url("../img/Header-decoration.png");
   background-repeat: no-repeat;
 }
@@ -287,7 +286,7 @@ a {
 
 .ingredients-list {
   display: flex;
-  justify-content: space-around;  
+  justify-content: space-around; 
   padding: 0 0 0 10px;
 }
 
@@ -303,8 +302,19 @@ a {
 }
 
 .menu-title {
-  padding: 0 0 20px;
+  padding: 80px 0 40px;
   color: #cc9900; 
+}
+
+.menu-title:after {
+  content: '';
+  position: absolute;
+  top: 145px;
+  left: 70px;
+  width: 65%;
+  height: 65%;
+  background-image: url("../img/divider-gold.svg");
+  background-repeat: no-repeat;
 }
 
 .menu-price {
@@ -316,30 +326,68 @@ a {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap; 
-  padding: 80px 18%; 
+  padding: 0 17% 80px; 
   margin: 0 0;
+}
+
+
+.list-menu > li {
+  flex-basis: 500px;
 }
 
 /*Я изменила разметку и сделала название блюда не как заголовок, иначе не могла поднять цену без использования кординат, которые ты сказала не использовать*/
 .menu-dish-name {
+  padding: 0 0 5px;
   color: #cdab56;
   font-size: 21px; 
   line-height: 1.5;
+  border-bottom: 1px solid rgba(204, 153, 0, 0.3);
 }
 
 .menu-dish-description {
   font-size: 16px;
+  margin: 0 0 30px;
 }
 
 .menu-price {
   float: right;
+  margin: 0 0 0 250px;
   color: #cdab56;
   font-size: 21px;
-  text-align: right;
 }
 
+.menu-special {
+  position: relative;
+}
+
+.menu-special::before {
+  content: '';
+  position: absolute;
+  width: 520px;
+  height: 100px;
+  left: -10px;
+  top: -10px;
+  border: 1px solid rgba(204, 153, 0, 0.3);
+}
+
+.menu-special::after {
+  content: 'Special';
+  position: absolute;
+  top: -32px;
+  right: -10px;
+  width: 68px;
+  height: 23px;
+  padding: 1px 0;
+  text-align: center;
+  font-family: 'Lato', 'Arial', sans-serif;
+  color: #fff;
+  background-color: #cc9900;
+  background-image: url("../img/Special.jpg");  
+}
+
+
 .reviews { 
-  display: inline-block; /* используй инлайн блоки для микросеток */
+  padding: 100px 26%;
   color: #FFF;
   background-color: #000000;
   text-align: center;
@@ -349,20 +397,41 @@ a {
 }
 
 .reviews-title {
-  padding: 75px 0 30px 0;
+  padding: 0 0 30px;
+}
+
+.reviews-title::after {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  width: 40%;
+  height: 40%;
+  background-image: url("../img/divider-white.svg");
+  background-repeat: no-repeat;  
 }
 
 .reviews-container{
+  padding: 73px 40px 83px;
   width: 774px;
-  min-height: 557px; /* что произойдет если у тебя уменьшится кол-во контента? Лучше работай с паддингами, а не минимальной высотой */
-  background-color: rgba(0,0,0,0.6);
-  margin: 100px 412px; /* тут исправить */
+  background-color: rgba(0,0,0,0.6);  
 }
 
 .review-text {
+  position: relative;
   font-size: 22px;
   line-height: 2;
-  padding: 8px 25px 0 25px;
+}
+
+.review-text::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 45px;
+  bottom: 5px;
+  background-image: url("../img/quotes.png");
+  background-repeat: no-repeat;  
 }
 
 .review-source {
@@ -387,13 +456,25 @@ a {
 }
 
 .reservation-container {
-  width: 510px; /* надо менять разметку и убирать лишнее */
+  width: 35%; 
   padding: 0 100px 0 0;
 }
 
 .reservation-title {
+  position: relative;
   color: #cc9900;
   padding: 0 0 47px 0;
+}
+
+.reservation-title::after {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 70px;
+  width: 65%;
+  height: 65%;
+  background-image: url("../img/divider-gold.svg");
+  background-repeat: no-repeat;
 }
 
 .reservation-text {
@@ -415,32 +496,58 @@ a {
   color: #cc9900;
 }
 
-.reservation-name, /* задай один класс для всех полей ввода и его стилизуй потому что все поля у тебя выглядит одинаково, задавать 3 разных класса - это избыточно */
-.reservation-mail,
-.reservation-date,
-.reservation-number {
+.reservation-input {
   display: block;
   width: 200px;
   height: 34px;
   margin: 5px 30px 0 0;
-  padding: 0 0 0 10px; /* отступ должен быть со всех сторон, текст который вводит пользователь не должен прижиматься к краям поля ввода */
+  padding: 5px 10px; 
   background-color: rgba(255, 255, 255, 0.6);
   border: 1px solid #c8c6c6 ;
   font-size: 14px;
   font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
-.reservation-name:hover,
-.reservation-name:focus,
-.reservation-mail:hover,
-.reservation-mail:focus,
-.reservation-date:hover,
-.reservation-date:focus,
-.reservation-number:hover,
-.reservation-number:focus {
+.reservation-input:hover,
+.reservation-input:focus {
   border: 1px solid #c89f2d ;
 }
 
+.label-date {
+  position: relative;
+}
+
+.label-date::before {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 14px;
+  top: 32px;
+  left: 175px;
+  background-image: url("../img/icon_calendar.png");
+}
+
+.input-date {
+  padding: 5px 30px 5px 10px ;
+}
+
+.party-label {
+   position: relative;
+}
+
+.party-label::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  top: 38px;
+  left: 178px;
+  background-image: url("../img/icon_arrow.png");
+}
+
+.party-input {
+  padding: 5px 30px 5px 10px ;
+}
 /*Нашла статью, как стилизовать плейсхолдеры, не знаю, что такое webkit и moz и взяла код оттуда*/
 
 ::-webkit-input-placeholder { font-style: italic; }

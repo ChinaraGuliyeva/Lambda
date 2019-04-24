@@ -104,7 +104,7 @@
                 <p class="menu-dish-name">Olive Special <span class="menu-price">$5.99</span></p>
                 <p class="menu-dish-description">Refreshing traditional cucumber and garlic yoghurt dip.</p>
               </li>
-              <li>
+              <li class="menu-special">
                 <p class="menu-dish-name">Greek Salad <span class="menu-price">$5.50</span></p>
                 <p class="menu-dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</p>
               </li>
@@ -118,10 +118,10 @@
             <h3 class="title menu-title">Main Dishes</h3>
             <ul class="submenu">
               <li>
-                <p class="menu-dish-name">Cornish Mackerel <span class="menu-price">$5.99</span></p>
+                <p class="menu-dish-name">Cornish Mackerel<span class="menu-price">$5.99</span></p>
                 <p class="menu-dish-description">Refreshing traditional cucumber and garlic yoghurt dip.</p>
               </li>
-              <li>
+              <li class="menu-special">
                 <p class="menu-dish-name">Roast Lamb <span class="menu-price">$5.50</span></p>
                 <p class="menu-dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</p>
               </li>
@@ -156,16 +156,16 @@
           <p class="text reservation-text">Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p>
           <form class="reservation-form" action="#" method="post">
             <label class="form-label">Name
-              <input class="reservation-name" type="text" name="user-name" id="user-name" placeholder="your name *" required>
+              <input class="reservation-input" type="text" name="user-name" id="user-name" placeholder="your name *" required>
             </label>
             <label class="form-label">E-mail
-              <input class="reservation-mail" type="text" name="e-mail" id="e-mail" placeholder="your e-mail *" required>
+              <input class="reservation-input" type="text" name="e-mail" id="e-mail" placeholder="your e-mail *" required>
             </label>
-            <label class="form-label">Date
-              <input class="reservation-date" type="text" name="date" id="date" placeholder="date *" required>
+            <label class="form-label label-date">Date
+              <input class="reservation-input input-date" type="text" name="date" id="date" placeholder="date *" required>
             </label>
-            <label class="form-label">Party number
-              <input class="reservation-number" type="number" name="party-number" id="party-number" placeholder="party number" min="1">
+            <label class="form-label party-label">Party number
+              <input class="reservation-input party-input" type="number" name="party-number" id="party-number" placeholder="party number" min="1">
             </label>
             <button class="reservation-btn" type="submit">Book now!</button>
           </form>
