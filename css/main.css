@@ -164,7 +164,7 @@ a {
 
 /*Когда я спускаю дивайдер на место, перестают работать кнопки. Почему? Поэтому я остаила его валяться в стороне*/
 
-.header-page-title::after {
+/*.header-page-title::after {
   content: '';
   position: absolute;
   top: 250px;
@@ -173,7 +173,7 @@ a {
   background-image: url("../img/Header-decoration.png");
   background-repeat: no-repeat;
 }
-
+*/
 .header-btn {
   display: inline-block;
   padding: 0 50px;
